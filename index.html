@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-9L2G42VDKE"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-9L2G42VDKE');
-</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9L2G42VDKE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9L2G42VDKE');
+    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Δελέρια | Η καρδιά του Τυρνάβου</title>
-    ```
-
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { earth: '#4a4433', clay: '#a0522d', sage: '#6b8e23', cream: '#faf9f0' },
+                    colors: { 
+                        earth: '#4a4433', 
+                        clay: '#a0522d',  
+                        sage: '#6b8e23',  
+                        cream: '#faf9f0'  
+                    },
                     fontFamily: { sans: ['"Noto Sans Greek"', 'sans-serif'] }
                 }
             }
         }
     </script>
+    
     <style>
         html { scroll-behavior: smooth; }
         .hero-village {
             background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(74,68,51,0.7) 50%, rgba(74,68,51,1) 100%), url('deleria-main.jpg');
-            background-size: cover; background-position: center;
+            background-size: cover; 
+            background-position: center;
         }
         .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
         .fade-in.visible { opacity: 1; transform: translateY(0); }
@@ -46,6 +51,7 @@
             <div class="hidden md:flex gap-8 text-[10px] font-bold text-cream uppercase tracking-widest">
                 <a href="#about" class="hover:text-clay transition">Το Χωριο</a>
                 <a href="#history" class="hover:text-clay transition">Ιστορια</a>
+                <a href="#landmarks" class="hover:text-clay transition">Αξιοθεατα</a>
                 <a href="#contact" class="hover:text-clay transition">Επικοινωνια</a>
             </div>
         </div>
@@ -53,6 +59,7 @@
 
     <section class="relative min-h-screen flex items-center justify-center text-center hero-village">
         <div class="relative z-10 px-6">
+            <span class="inline-block text-cream font-bold tracking-[0.5em] text-xs uppercase mb-4">Καλώς ήρθατε στα</span>
             <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter uppercase leading-none">ΔΕΛΕΡΙΑ</h1>
             <p class="mt-8 text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto italic uppercase tracking-[0.3em]">Η γη των προγόνων μας</p>
         </div>
@@ -60,11 +67,41 @@
 
     <section id="about" class="py-24 bg-white scroll-mt-10">
         <div class="max-w-6xl mx-auto px-6 text-center fade-in">
-            <span class="text-sage font-black tracking-widest text-[10px] uppercase">Καλώς ήρθατε</span>
-            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic">Ένας τόπος ευλογημένος</h2>
+            <span class="text-sage font-black tracking-widest text-[10px] uppercase">Ενας Τοπος Ευλογημενος</span>
+            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic">Η καρδιά του θεσσαλικού κάμπου</h2>
             <p class="mt-8 text-zinc-600 text-lg leading-relaxed max-w-3xl mx-auto">
-                Τα Δελέρια δεν είναι απλώς ένα χωριό στον χάρτη. Είναι οι μνήμες μας, οι αμπελώνες μας και η ζεστή φιλοξενία των ανθρώπων του κάμπου.
+                Τα Δελέρια δεν είναι απλώς ένα χωριό στον χάρτη. Είναι οι μνήμες μας, οι εύφοροι αμπελώνες μας και η ζεστή φιλοξενία των ανθρώπων μας που επιμένουν να δημιουργούν στον τόπο τους.
             </p>
+        </div>
+    </section>
+
+    <section id="landmarks" class="py-24 bg-earth text-white scroll-mt-10 overflow-hidden">
+        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+             <h2 class="text-4xl font-black uppercase italic tracking-tighter mb-12">Σημεία Αναφοράς</h2>
+             <div class="grid md:grid-cols-3 gap-12 text-left">
+                <div class="p-8 bg-white/5 rounded-[40px] border border-white/10">
+                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Άγιος Δημήτριος</h3>
+                    <p class="text-zinc-400 text-sm italic">Ο πνευματικός φάρος του χωριού μας.</p>
+                </div>
+                <div class="p-8 bg-white/5 rounded-[40px] border border-white/10">
+                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Η Πλατεία</h3>
+                    <p class="text-zinc-400 text-sm italic">Εκεί που χτυπά η καρδιά της κοινότητας.</p>
+                </div>
+                <div class="p-8 bg-white/5 rounded-[40px] border border-white/10">
+                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Οι Αμπελώνες</h3>
+                    <p class="text-zinc-400 text-sm italic">Η πηγή της ζωής και της παραγωγής μας.</p>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-cream scroll-mt-10 text-center">
+        <div class="max-w-4xl mx-auto px-6 fade-in">
+            <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Επικοινωνία</h2>
+            <div class="bg-white p-12 rounded-[60px] shadow-xl border border-earth/5">
+                <p class="text-zinc-600 mb-6 italic">Για κάθε πληροφορία σχετικά με τα Δελέρια:</p>
+                <a href="mailto:info@deleria.gr" class="text-clay font-bold text-xl hover:underline">info@deleria.gr</a>
+            </div>
         </div>
     </section>
 
