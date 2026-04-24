@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Δελέρια | Το χωριό μας</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { earth: '#4a4433', clay: '#a0522d', cream: '#faf9f0' },
+                    fontFamily: { sans: ['"Noto Sans Greek"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-village {
+            background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(74,68,51,1) 100%), url('oldschool.jpg');
+            background-size: cover; background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-cream font-sans">
+    <nav class="fixed top-0 w-full z-50 bg-earth/95 backdrop-blur-md h-16 flex items-center px-6">
+        <span class="text-cream font-black text-xl italic">ΔΕΛΕΡΙΑ</span>
+    </nav>
+    <section class="min-h-screen flex items-center justify-center hero-village text-center">
+        <h1 class="text-7xl md:text-9xl font-black text-white uppercase italic">ΔΕΛΕΡΙΑ</h1>
+    </section>
+    <section class="py-24 bg-white text-center">
+        <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Επικοινωνια</h2>
+        <a href="mailto:pikrosk@gmail.com" class="text-clay font-bold text-xl">pikrosk@gmail.com</a>
+    </section>
+</body>
+</html>
