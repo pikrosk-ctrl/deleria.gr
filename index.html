@@ -20,7 +20,12 @@
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { earth: '#4a4433', clay: '#a0522d', sage: '#6b8e23', cream: '#faf9f0' },
+                    colors: { 
+                        earth: '#4a4433', 
+                        clay: '#a0522d', 
+                        sage: '#6b8e23', 
+                        cream: '#faf9f0' 
+                    },
                     fontFamily: { sans: ['"Noto Sans Greek"', 'sans-serif'] }
                 }
             }
@@ -55,47 +60,74 @@
 
     <section class="relative min-h-screen flex items-center justify-center text-center hero-village">
         <div class="relative z-10 px-6">
-            <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter uppercase italic leading-none">ΔΕΛΕΡΙΑ</h1>
-            <p class="mt-8 text-white/90 text-lg md:text-xl font-medium italic uppercase tracking-[0.3em]">Το χωριό μας</p>
+            <span class="inline-block text-cream font-bold tracking-[0.5em] text-xs uppercase mb-4">Καλώς ήρθατε στα</span>
+            <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter uppercase leading-none">ΔΕΛΕΡΙΑ</h1>
+            <p class="mt-8 text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto italic uppercase tracking-[0.3em]">Το χωριό μας</p>
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-white text-center fade-in">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Στην καρδια του καμπου</h2>
-            <p class="text-zinc-600 text-lg leading-relaxed max-w-3xl mx-auto">
-                Τα Δελέρια είναι ο τόπος που γεννηθήκαμε και μεγαλώσαμε.
+    <section id="about" class="py-24 bg-white scroll-mt-10">
+        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+            <span class="text-sage font-black tracking-widest text-[10px] uppercase">Το μέρος μας</span>
+            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic">Στην καρδιά του θεσσαλικού κάμπου</h2>
+            <p class="mt-8 text-zinc-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                Τα Δελέρια είναι ο τόπος που γεννηθήκαμε, μεγαλώσαμε και δεθήκαμε με τους ανθρώπους μας.
             </p>
         </div>
     </section>
 
-    <section id="history" class="py-24 bg-cream text-center fade-in border-t border-earth/10">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Ιστορια</h2>
-            <p class="text-zinc-600 text-lg italic">Σύντομα θα προστεθεί το κείμενο για την ιστορία του χωριού μας.</p>
-        </div>
-    </section>
-
-    <section id="location" class="py-24 bg-white text-center fade-in border-t border-earth/10">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Τοποθεσια</h2>
-            <div class="max-w-4xl mx-auto rounded-[40px] overflow-hidden shadow-2xl border-8 border-earth/5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d12232.483955684784!2d22.37893905!3d39.81432435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1358f001099f7d0b%3A0xc00f135118747f4!2sDeleria%20401%2000!5e0!3m2!1sen!2sgr!4v1713980000000!5m2!1sen!2sgr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <section id="history" class="py-24 bg-cream scroll-mt-10 border-t border-earth/10">
+        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+            <span class="text-sage font-black tracking-widest text-[10px] uppercase">Οι ριζες μας</span>
+            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-8">Ιστορια</h2>
+            <div class="bg-white p-10 rounded-[40px] shadow-lg border border-earth/5 text-left max-w-4xl mx-auto text-zinc-600 text-lg leading-relaxed">
+                <p>Εδώ θα προσθέσουμε σύντομα το κείμενο για την ιστορία του χωριού μας.</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-cream text-center fade-in border-t border-earth/10">
-        <div class="max-w-4xl mx-auto px-6">
+    <section id="landmarks" class="py-24 bg-earth text-white scroll-mt-10">
+        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+             <h2 class="text-4xl font-black uppercase italic tracking-tighter mb-12">Σημεια Αναφορας</h2>
+             <div class="grid md:grid-cols-3 gap-12 text-left">
+                <div class="p-8 bg-white/5 rounded-[40px] border border-white/10">
+                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Άγιος Δημήτριος</h3>
+                    <p class="text-zinc-400 text-sm italic">Ο πνευματικός φάρος του χωριού μας.</p>
+                </div>
+                <div class="p-8 bg-white/5 rounded-[40px] border border-white/10">
+                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Η Πλατεία</h3>
+                    <p class="text-zinc-400 text-sm italic">Εκεί που χτυπά η καρδιά της κοινότητας.</p>
+                </div>
+                <div class="p-8 bg-white/5 rounded-[40px] border border-white/10">
+                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Οι Αμπελώνες</h3>
+                    <p class="text-zinc-400 text-sm italic">Η πηγή της ζωής και της παραγωγής μας.</p>
+                </div>
+             </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-24 bg-white scroll-mt-10 border-t border-earth/10">
+        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+            <span class="text-sage font-black tracking-widest text-[10px] uppercase">Πού θα μας βρείτε</span>
+            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-8">Τοποθεσια</h2>
+            <div class="max-w-4xl mx-auto rounded-[40px] overflow-hidden shadow-2xl border-8 border-earth/5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12344.385552392762!2d22.39126442657438!3d39.81559902636453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13589146195821c3%3A0xe74f51e048995393!2zzpTOtc67zq3Pgc65zrE!5e0!3m2!1sel!2sgr!4v1713980000000!5m2!1sel!2sgr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-cream scroll-mt-10 text-center border-t border-earth/10">
+        <div class="max-w-4xl mx-auto px-6 fade-in">
             <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Επικοινωνια</h2>
             <div class="bg-white p-12 rounded-[60px] shadow-xl border border-earth/5">
+                <p class="text-zinc-600 mb-6 italic">Για κάθε πληροφορία σχετικά με τα Δελέρια:</p>
                 <a href="mailto:pikrosk@gmail.com" class="text-clay font-bold text-xl hover:underline">pikrosk@gmail.com</a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-earth py-12 text-center text-cream/30 text-[9px] uppercase tracking-[0.5em]">
-        © 2026 ΔΕΛΕΡΙΑ ΤΥΡΝΑΒΟΥ
+    <footer class="bg-earth py-12 text-center border-t border-white/5">
+        <p class="text-cream/30 text-[9px] uppercase tracking-[0.5em]">© 2026 ΔΕΛΕΡΙΑ ΤΥΡΝΑΒΟΥ • deleria.gr</p>
     </footer>
 
     <script>
