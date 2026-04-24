@@ -35,7 +35,6 @@
     <style>
         html { scroll-behavior: smooth; }
         .hero-village {
-            /* Η νέα σου φωτογραφία ως banner */
             background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(74,68,51,0.7) 50%, rgba(74,68,51,1) 100%), url('oldschool.jpg');
             background-size: cover; 
             background-position: center;
@@ -49,7 +48,7 @@
     <nav class="fixed top-0 w-full z-50 bg-earth/95 backdrop-blur-md border-b border-white/10">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
             <span class="text-cream font-black text-xl tracking-tighter uppercase italic">ΔΕΛΕΡΙΑ</span>
-            <div class="hidden md:flex gap-8 text-[10px] font-bold text-cream uppercase tracking-widest">
+            <div class="hidden md:flex gap-6 text-[10px] font-bold text-cream uppercase tracking-widest">
                 <a href="#about" class="hover:text-clay transition">Το Χωριο</a>
                 <a href="#history" class="hover:text-clay transition">Ιστορια</a>
                 <a href="#landmarks" class="hover:text-clay transition">Αξιοθεατα</a>
@@ -83,24 +82,7 @@
             <span class="text-sage font-black tracking-widest text-[10px] uppercase">Οι ριζες μας</span>
             <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-8">Ιστορια</h2>
             <div class="bg-white p-10 rounded-[40px] shadow-lg border border-earth/5 text-left max-w-4xl mx-auto text-zinc-600 text-lg leading-relaxed">
-                <p>
-
-Το δημοτικό διαμέρισμα των Δελερίων βρίσκεται σε απόσταση 19 χλμ. από τη Λάρισα και 6 χλμ.  βόρεια  από τον Αμπελώνα, με 1002 κατοίκους και έκταση 21.996 στρέμματα.
-
-Στο κέντρο των Δελερίων δεσπόζει  ο ναός του Αγ. Δημητρίου (1898), ενώ η εκκλησία της Παναγίας, που καταστράφηκε το 1897 από τους Τούρκους, ανακατασκευάστηκε  το 1980.  Στο ξωκλήσι του Αγ. Αθανασίου (1968), που βρίσκεται στην είσοδο του χωριού, οι κάτοικοι γιορτάζουν την Πρωτομαγιά  με ψήσιμο αρνιών  σε κατάλληλα διαμορφωμένο  χώρο.
-
-Οι κάτοικοι των Δελερίων εργάζονται σε υπηρεσίες της Λάρισας και των άλλων αστικών κέντρων της περιοχής ενώ αρκετοί ασχολούνται με τη γεωργία και την κτηνοτροφία.
-
-Ιστορική Αναδρομή
-
-Στα χρόνια της Τουρκοκρατίας το χωριό αποτελούνταν από 3 οικισμούς, το «Δελέ» το «Κουτάφ» και «Εβερναζ», που αντιστοιχούν στα ονόματα Αράβων στρατηγών. Τα Δελέρια μέχρι το 1881 ήταν υπό τουρκική κατοχή και κατοικούνταν από Τούρκους. Μετά τη συνθήκη του Βερολίνου το χωριό προσαρτήθηκε στη Θεσσαλία και εγκαταστάθηκαν  εδώ κάτοικοι από τα μέρη Κρυόβρυση, Ελασσόνα, Καρυά και Συκαμινέα. Αξιοσημείωτο γεγονός στην ιστορία του χωριού αποτελεί  η ελληνοτουρκική μάχη, που διεξήχθη  εντός του οικισμού το 1897. Ο ελληνοτουρκικός πόλεμος  του 1897 άρχισε στις 5 Απριλίου και ήταν ατυχής για την Ελλάδα. Η περιοχή του Τυρνάβου επηρεάστηκε από την πρώτη  κιόλας μέρα, καθώς οι  εναρκτήριες συγκρούσεις έλαβαν χώρα στη Μελούνα,  στους πρόποδες  της οποίας βρίσκεται ο Τύρναβος. Επικεφαλής της ελληνικής Ταξιαρχίας που είχε καταλάβει τη γραμμή Μπογάζι –  Λουσφάκι, Γκριτζόβαλη, Μελούνα  ήταν ο ταξίαρχος Μαστραπάς και διοικητής των τουρκικών στρατευμάτων ο Εντέμ Πασάς. Η μάχη άρχισε στις 6 το πρωί της Κυριακής των Βαΐων, στη Μελούνα. Μετά από σθεναρή αντίσταση τα ελληνικά στρατεύματα, που εντωμεταξύ  έχασαν  τον ταξίαρχό τους, υποχώρησαν στη γραμμή Λουσφάκι – Δελέρια, που έγινε τρομερή μάχη. Ύστερα από ηρωική άμυνα μιας μέρας μπροστά στη μεγάλη αριθμητική υπεροχή του εχθρού, ο ελληνικός στρατός αναγκάστηκε  να υποχωρήσει  προς τη Λάρισα κι από κει στα Φάρσαλα.
-
-Οι κάτοικοι του  Τυρνάβου και των γύρω χωριών, βλέποντας  τα ελληνικά στρατεύματα  να συμπτύσσονται, εγκατέλειψαν τα σπίτια τους και έφυγαν με κάθε μέσο (σούστες, κάρα κ.λ.π.) προς τη Λάρισα. Η ανάμειξη του άμαχου πληθυσμού  με τα  υποχωρούντα στρατεύματα  επέφερε μεγάλη σύγχυση.
-
-Ο τουρκικός στρατός κατέλαβε τον Τύρναβο στις 12 Απριλίου 1897. Οι Τυρναβίτες ακολούθησαν τα υποχωρούντα στρατεύματα και από τη Λάρισα, τα Φάρσαλα, το Δομοκό, τη Λαμία έφθασαν στη Χαλκίδα, στη Λειβαδιά και στην Αθήνα όπου έμειναν για έναν περίπου χρόνο.
-
-Με την επιστροφή των κατοίκων  στα επόμενα χρόνια, τα Δελέρια ακολούθησαν μέχρι και σήμερα  το δρόμο της ανάπτυξης μέσα από τις καθημερινές  προσπάθειες  των ντόπιων κατοίκων τους.
-.</p>
+                <p>Εδώ μπορείς να προσθέσεις το κείμενο για την ιστορία του χωριού μας.</p>
             </div>
         </div>
     </section>
@@ -126,39 +108,36 @@
     </section>
 
     <section id="gallery" class="py-24 bg-cream scroll-mt-10 border-t border-earth/10">
-    <div class="max-w-6xl mx-auto px-6 text-center">
-        <span class="text-sage font-black tracking-widest text-[10px] uppercase">Στιγμες απο το χωριο μας</span>
-        <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-12">Φωτογραφιες</h2>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+            <span class="text-sage font-black tracking-widest text-[10px] uppercase">Στιγμες απο τον τοπο μας</span>
+            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-12">Φωτογραφιες</h2>
             
-            <div class="aspect-square bg-earth/10 rounded-3xl overflow-hidden shadow-lg border border-earth/5">
-                <img src="P10204.JPG" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Φωτογραφία 1">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                <div class="aspect-square bg-earth/20 rounded-3xl overflow-hidden shadow-lg border border-earth/5">
+                    <img src="P10204.JPG" alt="Δελέρια 1" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                </div>
             </div>
             
+            <p class="mt-8 text-sm text-zinc-500 italic">Για να προσθέσετε κι άλλες, απλώς αντιγράψτε το παραπάνω κουτάκι και αλλάξτε το όνομα του αρχείου.</p>
         </div>
-        
-        <p class="mt-8 text-xs text-zinc-400 italic">Ανεβάστε αρχεία στο GitHub με ονόματα foto1.jpg, foto2.jpg κτλ.</p>
-    </div>
-</section>
+    </section>
 
     <section id="location" class="py-24 bg-white scroll-mt-10">
         <div class="max-w-6xl mx-auto px-6 text-center fade-in">
             <span class="text-sage font-black tracking-widest text-[10px] uppercase">Πού θα μας βρείτε</span>
             <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-8">Τοποθεσια</h2>
             <div class="max-w-4xl mx-auto rounded-[40px] overflow-hidden shadow-2xl border-8 border-earth/5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12345!2d22.3!3d39.8!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMznCsDQ4JzAwLjAiTiAyMsKwMTgnMDAuMCJF!5e0!3m2!1sel!2sgr!4v123456789" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12224.225573432135!2d22.3615367!3d39.8093158!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1358913b8e72750f%3A0x500bd2ce3098f40!2zzpTOtc67zq3Pgc65zrE!5e0!3m2!1sel!2sgr!4v1713894000000!5m2!1sel!2sgr" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="py-24 bg-cream scroll-mt-10 text-center">
+    <section id="contact" class="py-24 bg-cream scroll-mt-10 text-center border-t border-earth/10">
         <div class="max-w-4xl mx-auto px-6 fade-in">
             <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Επικοινωνια</h2>
-            <div class="bg-white p-12 rounded-[40px] shadow-xl border border-earth/5">
-                                <a href="mailto:pikrosk@gmail.com" class="text-clay font-bold text-xl hover:underline">pikrosk@gmail.com</a>
-            </div>
-        </div>
+            <div class="bg-white p-12 rounded-[60px] shadow-xl border border-earth/5">
+                <p class="text-zinc-600 mb-6 italic">Για κάθε πληροφορία σχετικά με τα Δελέρια:</p>
+                <a href="mailto:pikrosk@gmail.com" class="text-clay font-bold text-xl hover:underline">pikrosk@gmail.com</a>
             </div>
         </div>
     </section>
@@ -175,4 +154,3 @@
     </script>
 </body>
 </html>
-
