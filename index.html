@@ -1,38 +1,108 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9L2G42VDKE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-9L2G42VDKE');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Δελέρια | Το χωριό μας</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek:wght@400;700;900&display=swap" rel="stylesheet">
+    
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { earth: '#4a4433', clay: '#a0522d', cream: '#faf9f0' },
+                    colors: { earth: '#4a4433', clay: '#a0522d', sage: '#6b8e23', cream: '#faf9f0' },
                     fontFamily: { sans: ['"Noto Sans Greek"', 'sans-serif'] }
                 }
             }
         }
     </script>
+    
     <style>
+        html { scroll-behavior: smooth; }
         .hero-village {
-            background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(74,68,51,1) 100%), url('oldschool.jpg');
-            background-size: cover; background-position: center;
+            background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(74,68,51,0.7) 50%, rgba(74,68,51,1) 100%), url('oldschool.jpg');
+            background-size: cover; 
+            background-position: center;
         }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
-<body class="bg-cream font-sans">
-    <nav class="fixed top-0 w-full z-50 bg-earth/95 backdrop-blur-md h-16 flex items-center px-6">
-        <span class="text-cream font-black text-xl italic">ΔΕΛΕΡΙΑ</span>
+<body class="bg-cream text-zinc-900 font-sans">
+
+    <nav class="fixed top-0 w-full z-50 bg-earth/95 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+            <span class="text-cream font-black text-xl tracking-tighter uppercase italic">ΔΕΛΕΡΙΑ</span>
+            <div class="hidden md:flex gap-8 text-[10px] font-bold text-cream uppercase tracking-widest">
+                <a href="#about" class="hover:text-clay transition">Το Χωριο</a>
+                <a href="#history" class="hover:text-clay transition">Ιστορια</a>
+                <a href="#landmarks" class="hover:text-clay transition">Αξιοθεατα</a>
+                <a href="#location" class="hover:text-clay transition">Τοποθεσια</a>
+                <a href="#contact" class="hover:text-clay transition">Επικοινωνια</a>
+            </div>
+        </div>
     </nav>
-    <section class="min-h-screen flex items-center justify-center hero-village text-center">
-        <h1 class="text-7xl md:text-9xl font-black text-white uppercase italic">ΔΕΛΕΡΙΑ</h1>
+
+    <section class="relative min-h-screen flex items-center justify-center text-center hero-village">
+        <div class="relative z-10 px-6">
+            <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter uppercase italic leading-none">ΔΕΛΕΡΙΑ</h1>
+            <p class="mt-8 text-white/90 text-lg md:text-xl font-medium italic uppercase tracking-[0.3em]">Το χωριό μας</p>
+        </div>
     </section>
-    <section class="py-24 bg-white text-center">
-        <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Επικοινωνια</h2>
-        <a href="mailto:pikrosk@gmail.com" class="text-clay font-bold text-xl">pikrosk@gmail.com</a>
+
+    <section id="about" class="py-24 bg-white text-center fade-in">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Στην καρδια του καμπου</h2>
+            <p class="text-zinc-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                Τα Δελέρια είναι ο τόπος που γεννηθήκαμε και μεγαλώσαμε.
+            </p>
+        </div>
     </section>
+
+    <section id="history" class="py-24 bg-cream text-center fade-in border-t border-earth/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Ιστορια</h2>
+            <p class="text-zinc-600 text-lg italic">Σύντομα θα προστεθεί το κείμενο για την ιστορία του χωριού μας.</p>
+        </div>
+    </section>
+
+    <section id="location" class="py-24 bg-white text-center fade-in border-t border-earth/10">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Τοποθεσια</h2>
+            <div class="max-w-4xl mx-auto rounded-[40px] overflow-hidden shadow-2xl border-8 border-earth/5">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d12232.483955684784!2d22.37893905!3d39.81432435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1358f001099f7d0b%3A0xc00f135118747f4!2sDeleria%20401%2000!5e0!3m2!1sen!2sgr!4v1713980000000!5m2!1sen!2sgr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-cream text-center fade-in border-t border-earth/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Επικοινωνια</h2>
+            <div class="bg-white p-12 rounded-[60px] shadow-xl border border-earth/5">
+                <a href="mailto:pikrosk@gmail.com" class="text-clay font-bold text-xl hover:underline">pikrosk@gmail.com</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-earth py-12 text-center text-cream/30 text-[9px] uppercase tracking-[0.5em]">
+        © 2026 ΔΕΛΕΡΙΑ ΤΥΡΝΑΒΟΥ
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
