@@ -133,7 +133,7 @@
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             
             <div class="aspect-square bg-earth/10 rounded-3xl overflow-hidden shadow-lg border border-earth/5">
-                <img src="foto1.jpg" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Φωτογραφία 1">
+                <img src="P10204.JPG" class="w-full h-full object-cover hover:scale-110 transition duration-500" alt="Φωτογραφία 1">
             </div>
             
         </div>
