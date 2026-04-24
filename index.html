@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=ΤΟ_ID_ΣΟΥ_ΕΔΩ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'ΤΟ_ID_ΣΟΥ_ΕΔΩ');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Δελέρια | Η καρδιά του Τυρνάβου</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek:wght@400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { earth: '#4a4433', clay: '#a0522d', sage: '#6b8e23', cream: '#faf9f0' },
+                    fontFamily: { sans: ['"Noto Sans Greek"', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hero-village {
+            background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(74,68,51,0.7) 50%, rgba(74,68,51,1) 100%), url('deleria-main.jpg');
+            background-size: cover; background-position: center;
+        }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-cream text-zinc-900 font-sans">
+
+    <nav class="fixed top-0 w-full z-50 bg-earth/95 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+            <span class="text-cream font-black text-xl tracking-tighter uppercase italic">ΔΕΛΕΡΙΑ</span>
+            <div class="hidden md:flex gap-8 text-[10px] font-bold text-cream uppercase tracking-widest">
+                <a href="#about" class="hover:text-clay transition">Το Χωριο</a>
+                <a href="#history" class="hover:text-clay transition">Ιστορια</a>
+                <a href="#contact" class="hover:text-clay transition">Επικοινωνια</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative min-h-screen flex items-center justify-center text-center hero-village">
+        <div class="relative z-10 px-6">
+            <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter uppercase leading-none">ΔΕΛΕΡΙΑ</h1>
+            <p class="mt-8 text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto italic uppercase tracking-[0.3em]">Η γη των προγόνων μας</p>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 bg-white scroll-mt-10">
+        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+            <span class="text-sage font-black tracking-widest text-[10px] uppercase">Καλώς ήρθατε</span>
+            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic">Ένας τόπος ευλογημένος</h2>
+            <p class="mt-8 text-zinc-600 text-lg leading-relaxed max-w-3xl mx-auto">
+                Τα Δελέρια δεν είναι απλώς ένα χωριό στον χάρτη. Είναι οι μνήμες μας, οι αμπελώνες μας και η ζεστή φιλοξενία των ανθρώπων του κάμπου.
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-earth py-12 text-center">
+        <p class="text-cream/30 text-[9px] uppercase tracking-[0.5em]">© 2026 ΔΕΛΕΡΙΑ ΤΥΡΝΑΒΟΥ • deleria.gr</p>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
