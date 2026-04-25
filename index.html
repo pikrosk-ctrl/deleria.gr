@@ -1,200 +1,125 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9L2G42VDKE"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-9L2G42VDKE');
-    </script>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Δελέρια | Το χωριό μας</title>
-    
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Greek:wght@400;700;900&display=swap" rel="stylesheet">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: { 
-                        earth: '#4a4433', 
-                        clay: '#a0522d', 
-                        sage: '#6b8e23', 
-                        cream: '#faf9f0' 
-                    },
-                    fontFamily: { sans: ['"Noto Sans Greek"', 'sans-serif'] }
-                }
-            }
-        }
-    </script>
-    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
     <style>
-        html { scroll-behavior: smooth; }
-        .hero-village {
-            background-image: linear-gradient(180deg, rgba(0,0,0,0.3) 0%, rgba(74,68,51,0.7) 50%, rgba(74,68,51,1) 100%), url('oldschool.jpg');
-            background-size: cover; 
-            background-position: center;
-        }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        body { font-family: 'Inter', sans-serif; background-color: #fcfaf7; }
+        .bg-cream { background-color: #fcfaf7; }
+        .text-earth { color: #4a4433; }
+        .bg-earth { background-color: #4a4433; }
+        .text-clay { color: #a65d3d; }
+        .bg-clay { background-color: #a65d3d; }
+        .text-sage { color: #6b705c; }
+        .fade-in { animation: fadeIn 1.5s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
     </style>
 </head>
-<body class="bg-cream text-zinc-900 font-sans">
+<body class="text-earth">
 
-    <nav class="fixed top-0 w-full z-50 bg-earth/95 backdrop-blur-md border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
-            <span class="text-cream font-black text-xl tracking-tighter uppercase italic">ΔΕΛΕΡΙΑ</span>
-            <div class="hidden md:flex gap-8 text-[10px] font-bold text-cream uppercase tracking-widest">
-                <a href="#about" class="hover:text-clay transition">Το Χωριο</a>
-                <a href="#history" class="hover:text-clay transition">Ιστορια</a>
-                <a href="#landmarks" class="hover:text-clay transition">Αξιοθεατα</a>
-                <a href="#location" class="hover:text-clay transition">Τοποθεσια</a>
-                <a href="#contact" class="hover:text-clay transition">Επικοινωνια</a>
+    <nav class="fixed w-full z-50 bg-earth/95 backdrop-blur-md py-4 border-b border-white/5">
+        <div class="max-w-6xl mx-auto px-6 flex justify-between items-center">
+            <a href="#" class="text-white font-black tracking-tighter text-2xl uppercase italic">ΔΕΛΕΡΙΑ</a>
+            <div class="hidden md:flex space-x-8 text-[10px] font-black uppercase tracking-widest text-white/70">
+                <a href="#history" class="hover:text-white transition">Ιστορια</a>
+                <a href="#landmarks" class="hover:text-white transition">Αξιοθεατα</a>
+                <a href="#photos" class="hover:text-white transition">Φωτογραφιες</a>
+                <a href="#location" class="hover:text-white transition">Τοποθεσια</a>
             </div>
         </div>
     </nav>
 
-    <section class="relative min-h-screen flex items-center justify-center text-center hero-village">
-        <div class="relative z-10 px-6">
-            <span class="inline-block text-cream font-bold tracking-[0.5em] text-xs uppercase mb-4">Καλώς ήρθατε στα</span>
-            <h1 class="text-7xl md:text-9xl font-black text-white tracking-tighter uppercase leading-none">ΔΕΛΕΡΙΑ</h1>
-            <p class="mt-8 text-white/90 text-lg md:text-xl font-medium max-w-2xl mx-auto italic uppercase tracking-[0.3em]">Το χωριό μας</p>
+    <section class="h-screen flex items-center justify-center bg-earth relative overflow-hidden">
+        <div class="absolute inset-0 opacity-40">
+            <img src="oldschool.jpg" alt="Δελέρια" class="w-full h-full object-cover">
         </div>
-    </section>
-
-    <section id="about" class="py-24 bg-white scroll-mt-10">
-        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
-            <span class="text-sage font-black tracking-widest text-[10px] uppercase">Το μέρος μας</span>
-            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic">Στην καρδιά του θεσσαλικού κάμπου</h2>
-            <p class="mt-8 text-zinc-600 text-lg leading-relaxed max-w-3xl mx-auto">
-                Τα Δελέρια είναι ο τόπος που γεννηθήκαμε, μεγαλώσαμε και δεθήκαμε με τους ανθρώπους μας.
-            </p>
+        <div class="relative text-center z-10 px-6 fade-in">
+            <span class="text-clay font-black tracking-[0.3em] text-xs uppercase mb-4 block">Καλως ηλθατε</span>
+            <h1 class="text-6xl md:text-8xl font-black text-white tracking-tighter uppercase italic leading-none">ΔΕΛΕΡΙΑ</h1>
+            <p class="mt-6 text-white/80 text-lg max-w-xl mx-auto font-light leading-relaxed">Ένα ιστορικό χωριό στην καρδιά της Θεσσαλίας, εκεί που η παράδοση συναντά το μέλλον.</p>
         </div>
     </section>
 
     <section id="history" class="py-24 bg-cream scroll-mt-10 border-t border-earth/10">
-        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
+        <div class="max-w-6xl mx-auto px-6 text-center">
             <span class="text-sage font-black tracking-widest text-[10px] uppercase">Οι ριζες μας</span>
             <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-12">Ιστορια</h2>
             
-            <div class="bg-white p-8 md:p-16 rounded-[40px] shadow-lg border border-earth/5 text-left max-w-4xl mx-auto text-zinc-600 text-lg leading-relaxed shadow-[0_20px_50px_rgba(74,68,51,0.05)]">
+            <div class="bg-white p-8 md:p-16 rounded-[40px] shadow-lg border border-earth/5 text-left max-w-4xl mx-auto text-zinc-600 text-lg leading-relaxed">
                 
                 <p class="mb-8">
-                    Στα χρόνια της Τουρκοκρατίας το χωριό αποτελούνταν από 3 οικισμούς, το <strong>«Δελέ»</strong>, το <strong>«Κουτάφ»</strong> και το <strong>«Εβερναζ»</strong>, ονόματα που σύμφωνα με την παράδοση αντιστοιχούν σε ονόματα Αράβων στρατηγών. Τα Δελέρια μέχρι το 1881 παρέμεναν υπό τουρκική κατοχή και κατοικούνταν αποκλειστικά από Τούρκους.
+                    Στα χρόνια της Τουρκοκρατίας το χωριό αποτελούνταν από 3 οικισμούς, το <strong>«Δελέ»</strong>, το <strong>«Κουτάφ»</strong> και το <strong>«Εβερναζ»</strong>. Μέχρι το 1881 παρέμεναν υπό τουρκική κατοχή και κατοικούνταν αποκλειστικά από Τούρκους.
                 </p>
 
                 <p class="mb-8">
-                    Μετά τη συνθήκη του Βερολίνου, το χωριό προσαρτήθηκε στη Θεσσαλία και ξεκίνησε μια νέα εποχή. Σταδιακά εγκαταστάθηκαν εδώ κάτοικοι από τη <strong>Κρυόβρυση</strong>, την <strong>Ελασσόνα</strong>, την <strong>Καρυά</strong> και τη <strong>Συκαμινέα</strong>, δημιουργώντας τη βάση της σημερινής κοινότητας.
+                    Μετά τη συνθήκη του Βερολίνου, το χωριό προσαρτήθηκε στη Θεσσαλία. Σταδιακά εγκαταστάθηκαν εδώ κάτοικοι από τη <strong>Κρυόβρυση</strong>, την <strong>Ελασσόνα</strong>, την <strong>Καρυά</strong> και τη <strong>Συκαμινέα</strong>.
+                </p>
+
+                <hr class="my-12 border-earth/10">
+                <h3 class="text-2xl font-black text-earth uppercase italic mb-8 text-center">Η Μαχη της Μελουνας (1897)</h3>
+
+                <p class="mb-8">
+                    Στις <strong>18 Απριλίου 1897</strong>, οι τουρκικές δυνάμεις εξαπέλυσαν επίθεση στη Μελούνα. Τα ελληνικά στρατεύματα, κάτω από τον καταιγισμό του πυροβολικού, αναγκάστηκαν να υποχωρήσουν στη γραμμή <strong>Λουσφάκι – Δελέρια</strong>.
                 </p>
 
                 <p class="mb-8">
-                    Το πλέον αξιοσημείωτο γεγονός στην ιστορία του χωριού αποτελεί η ελληνοτουρκική μάχη που διεξήχθη εντός του οικισμού το <strong>1897</strong>. Ο πόλεμος άρχισε στις 5 Απριλίου και η περιοχή του Τυρνάβου επηρεάστηκε από την πρώτη κιόλας μέρα, καθώς οι εναρκτήριες συγκρούσεις έλαβαν χώρα στη Μελούνα, στους πρόποδες της οποίας βρίσκεται ο Τύρναβος.
+                    Η <strong>2η Ταξιαρχία</strong> υποχώρησε μέσω Τυρνάβου προς τη Λάρισα, προσπαθώντας να επιβραδύνει τον εχθρό. Η ήττα αυτή άνοιξε τις πύλες για την τουρκική εισβολή στο ελληνικό έδαφος, με βαριές απώλειες για τη στρατιά Θεσσαλίας.
                 </p>
-
-                <p class="mb-8">
-                    Μετά από σθεναρή αντίσταση στη Μελούνα, τα ελληνικά στρατεύματα υποχώρησαν στη γραμμή <strong>Λουσφάκι – Δελέρια</strong>, όπου εξελίχθηκε μια τρομερή μάχη. Ύστερα από ηρωική άμυνα μιας μέρας απέναντι στη μεγάλη αριθμητική υπεροχή του εχθρού, ο ελληνικός στρατός αναγκάστηκε να υποχωρήσει προς τη Λάρισα και από εκεί στα Φάρσαλα.
-                </p>
-
-                <p class="mb-8">
-                    Η υποχώρηση αυτή προκάλεσε μεγάλη σύγχυση, καθώς ο άμαχος πληθυσμός του Τυρνάβου και των γύρω χωριών εγκατέλειψε τα σπίτια του, ακολουθώντας τον στρατό με κάθε μέσο. Ο τουρκικός στρατός κατέλαβε τον Τύρναβο στις 12 Απριλίου 1897, ενώ οι πρόσφυγες έφτασαν μέχρι τη Χαλκίδα και την Αθήνα, όπου παρέμειναν για περίπου έναν χρόνο.
-                </p>
-
-                <p>
-                    Με την επιστροφή των κατοίκων τα επόμενα χρόνια, τα Δελέρια ακολούθησαν τον δρόμο της ανασυγκρότησης. Μέσα από τις καθημερινές προσπάθειες και την εργατικότητα των ανθρώπων τους, το χωριό μεταμορφώθηκε σε μια ζωντανή και αναπτυσσόμενη κοινότητα, διατηρώντας ζωντανή τη μνήμη της ιστορικής του διαδρομής.
-                </p>
-                <div class="mt-12 pt-12 border-t border-earth/10">
-                    <hr class="my-12 border-earth/10">
-                    <h3 class="text-2xl font-black text-earth uppercase italic mb-8 text-center">Η Μαχη της Μελουνας (17–18 Απριλιου 1897)</h3>
-                    
-                    <p class="mb-8 italic text-zinc-500 border-l-4 border-clay pl-4">
-                        Το θέατρο επιχειρήσεων του Ελληνοτουρκικού Πολέμου του 1897 χωριζόταν από την οροσειρά της Πίνδου σε δύο ανεξάρτητα μέτωπα: το δυτικό της Ηπείρου και το ανατολικό της Θεσσαλίας.
-                    </p>
-
-                    <p class="mb-8">
-                        Ο στρατός Θεσσαλίας, υπό τον <strong>Διάδοχο Κωνσταντίνο</strong>, αποτελούνταν από 2 Μεραρχίες, ενώ οι τουρκικές δυνάμεις υπερτερούσαν σημαντικά με 7 Μεραρχίες πεζικού και 1 Μεραρχία Ιππικού. Στις <strong>17 Απριλίου 1897</strong>, άρχισαν οι πρώτες συμπλοκές των αντίπαλων φυλακίων στη μεθόριο.
-                    </p>
-
-                    <p class="mb-8">
-                        Στις <strong>18 Απριλίου</strong>, τα τουρκικά τμήματα εξαπέλυσαν την κύρια επίθεσή τους. Ενώ στο διαμέρισμα Ταφίλ – Βρύση οι Έλληνες κατάφεραν να αποκρούσουν τον εχθρό, στο διαμέρισμα της <strong>Μελούνας</strong> οι ελληνικές δυνάμεις αναγκάστηκαν να υποχωρήσουν κάτω από τον καταιγισμό του τουρκικού πυροβολικού, συμπτυσσόμενες αρχικά στη <strong>Λυγαριά</strong> και στη συνέχεια στο <strong>Μάτι</strong>.
-                    </p>
-
-                    <p class="mb-8">
-                        Νοτιότερα, στο Βοτανοχώρι, η αντίσταση ήταν σθεναρή μέχρι τις 15:00 το μεσημέρι, όταν τα τμήματα άρχισαν να συμπτύσσονται προς τους Αυγαλάδες και τελικά υποχώρησαν στη θεσσαλική πεδιάδα. Ο διοικητής της 1ης Μεραρχίας, βλέποντας ότι η ανάκτηση της Μελούνας ήταν αδύνατη, αποφάσισε τη γενική σύμπτυξη στο προγεφύρωμα της Λάρισας.
-                    </p>
-
-                    <p class="mb-8">
-                        Η <strong>2η Ταξιαρχία</strong> διατάχθηκε να υποχωρήσει μέσω <strong>Τυρνάβου</strong> προς τη Λάρισα, προσπαθώντας να επιβραδύνει την προέλαση του εχθρού. Η ήττα στη μάχη της Μελούνας άνοιξε ουσιαστικά τις πύλες για την τουρκική εισβολή στο ελληνικό έδαφος. 
-                    </p>
-
-                    <p class="text-sm italic">
-                        Οι απώλειες της στρατιάς Θεσσαλίας ήταν βαριές: <strong>412 νεκροί</strong> και <strong>1.633 τραυματίες</strong>. Οι σοβαρές ελλείψεις σε οπλισμό και το χαμηλό επίπεδο οργάνωσης της εποχής σφράγισαν την τύχη εκείνης της ατυχούς σύγκρουσης.
-                    </p>
-                </div>
-
             </div>
         </div>
     </section>
 
     <section id="landmarks" class="py-24 bg-earth text-white scroll-mt-10">
-        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
-             <h2 class="text-4xl font-black uppercase italic tracking-tighter mb-12">Σημεια Αναφορας</h2>
-             <div class="grid md:grid-cols-3 gap-12 text-left">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black uppercase italic mb-12 italic tracking-tighter">Σημεια Αναφορας</h2>
+            <div class="grid md:grid-cols-3 gap-12 text-left">
                 <div class="p-8 bg-white/5 rounded-[40px] border border-white/10">
-                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Άγιος Δημήτριος</h3>
+                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Αγιος Δημητριος</h3>
                     <p class="text-zinc-400 text-sm italic">Ο πνευματικός φάρος του χωριού μας.</p>
                 </div>
                 <div class="p-8 bg-white/5 rounded-[40px] border border-white/10">
-                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Η Πλατεία</h3>
+                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Η Πλατεια</h3>
                     <p class="text-zinc-400 text-sm italic">Εκεί που χτυπά η καρδιά της κοινότητας.</p>
                 </div>
                 <div class="p-8 bg-white/5 rounded-[40px] border border-white/10">
-                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Οι Αμπελώνες</h3>
+                    <h3 class="text-xl font-bold uppercase italic text-clay mb-4">Οι Αμπελωνες</h3>
                     <p class="text-zinc-400 text-sm italic">Η πηγή της ζωής και της παραγωγής μας.</p>
                 </div>
-             </div>
+            </div>
         </div>
     </section>
 
     <section id="photos" class="py-24 bg-white scroll-mt-10">
-        <div class="max-w-6xl mx-auto px-6 text-center fade-in">
-            <span class="text-clay font-black tracking-widest text-[10px] uppercase">Το χωριο μεσα απο τον φακο</span>
-            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-12">Φωτογραφικο Υλικο</h2>
-            
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-black text-earth uppercase italic mb-12 italic tracking-tighter">Φωτογραφικο Υλικο</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
                 <div class="group relative overflow-hidden rounded-[30px] shadow-lg aspect-square bg-cream">
-                    <img src="foto1.jpg" alt="Δελέρια 1" class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <img src="foto1.jpg" alt="Δελέρια" class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-earth/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span class="text-white font-bold tracking-widest uppercase text-sm">Προβολη</span>
                     </div>
                 </div>
-
                 <div class="group relative overflow-hidden rounded-[30px] shadow-lg aspect-square bg-cream">
-                    <img src="foto2.jpg" alt="Δελέρια 2" class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <img src="foto2.jpg" alt="Δελέρια" class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-earth/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span class="text-white font-bold tracking-widest uppercase text-sm">Προβολη</span>
                     </div>
                 </div>
-
                 <div class="group relative overflow-hidden rounded-[30px] shadow-lg aspect-square bg-cream">
-                    <img src="foto3.jpg" alt="Δελέρια 3" class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <img src="foto3.jpg" alt="Δελέρια" class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-earth/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
                         <span class="text-white font-bold tracking-widest uppercase text-sm">Προβολη</span>
                     </div>
                 </div>
-
             </div>
-            
-            <p class="mt-12 text-zinc-400 text-sm italic">
-                * Το υλικό ανανεώνεται συνεχώς με νέες λήψεις από το χωριό μας.
-            </p>
         </div>
+    </section>
+
     <footer class="py-12 bg-cream text-center border-t border-earth/10">
-        <p class="text-earth/60 text-sm">© 2026 Δελέρια - Όλα τα δικαιώματα διατηρούνται</p>
+        <p class="text-earth/60 text-[10px] uppercase font-black tracking-widest">© 2026 Δελέρια - Με αγαπη για τον τοπο μας</p>
     </footer>
 
 </body>
