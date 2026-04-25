@@ -159,36 +159,43 @@
         </div>
     </section>
 
-    <section id="location" class="py-24 bg-white scroll-mt-10 border-t border-earth/10">
+    <section id="photos" class="py-24 bg-white scroll-mt-10">
         <div class="max-w-6xl mx-auto px-6 text-center fade-in">
-            <span class="text-sage font-black tracking-widest text-[10px] uppercase">Πού θα μας βρείτε</span>
-            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-8">Τοποθεσια</h2>
-            <div class="max-w-4xl mx-auto rounded-[40px] overflow-hidden shadow-2xl border-8 border-earth/5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12344.385552392762!2d22.39126442657438!3d39.81559902636453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13589146195821c3%3A0xe74f51e048995393!2zzpTOtc67zq3Pgc65zrE!5e0!3m2!1sel!2sgr!4v1713980000000!5m2!1sel!2sgr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
+            <span class="text-clay font-black tracking-widest text-[10px] uppercase">Το χωριο μεσα απο τον φακο</span>
+            <h2 class="mt-4 text-4xl font-black text-earth uppercase italic mb-12">Φωτογραφικο Υλικο</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="group relative overflow-hidden rounded-[30px] shadow-lg aspect-square bg-cream">
+                    <img src="foto1.jpg" alt="Δελέρια 1" class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-earth/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold tracking-widest uppercase text-sm">Προβολη</span>
+                    </div>
+                </div>
 
-    <section id="contact" class="py-24 bg-cream scroll-mt-10 text-center border-t border-earth/10">
-        <div class="max-w-4xl mx-auto px-6 fade-in">
-            <h2 class="text-4xl font-black text-earth uppercase italic mb-8">Επικοινωνια</h2>
-            <div class="bg-white p-12 rounded-[60px] shadow-xl border border-earth/5">
-                <p class="text-zinc-600 mb-6 italic">Για κάθε πληροφορία σχετικά με τα Δελέρια:</p>
-                <a href="mailto:pikrosk@gmail.com" class="text-clay font-bold text-xl hover:underline">pikrosk@gmail.com</a>
-            </div>
-        </div>
-    </section>
+                <div class="group relative overflow-hidden rounded-[30px] shadow-lg aspect-square bg-cream">
+                    <img src="foto2.jpg" alt="Δελέρια 2" class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-earth/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold tracking-widest uppercase text-sm">Προβολη</span>
+                    </div>
+                </div>
 
-    <footer class="bg-earth py-12 text-center border-t border-white/5">
-        <p class="text-cream/30 text-[9px] uppercase tracking-[0.5em]">© 2026 ΔΕΛΕΡΙΑ ΤΥΡΝΑΒΟΥ • deleria.gr</p>
+                <div class="group relative overflow-hidden rounded-[30px] shadow-lg aspect-square bg-cream">
+                    <img src="foto3.jpg" alt="Δελέρια 3" class="object-cover w-full h-full transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-earth/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <span class="text-white font-bold tracking-widest uppercase text-sm">Προβολη</span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <p class="mt-12 text-zinc-400 text-sm italic">
+                * Το υλικό ανανεώνεται συνεχώς με νέες λήψεις από το χωριό μας.
+            </p>
+        </div>
+    <footer class="py-12 bg-cream text-center border-t border-earth/10">
+        <p class="text-earth/60 text-sm">© 2026 Δελέρια - Όλα τα δικαιώματα διατηρούνται</p>
     </footer>
 
-    <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
-    </script>
 </body>
 </html>
-
