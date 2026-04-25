@@ -252,6 +252,81 @@
         </div>
     </section>
 
+    <section id="culture-actions" class="py-24 bg-zinc-50 scroll-mt-20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="text-clay font-black tracking-widest text-[10px] uppercase">Οργανωση & Προγραμματισμος</span>
+                <h2 class="mt-4 text-4xl font-black text-earth uppercase tracking-tighter">Δρασεις Συλλογου</h2>
+            </div>
+
+            <div class="max-w-3xl mx-auto">
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <button onclick="changeCultureTab('tradition')" id="btn-tradition" class="px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition shadow-md bg-clay text-white">Παραδοση</button>
+                    <button onclick="changeCultureTab('environment')" id="btn-environment" class="px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition shadow-sm bg-white text-earth border border-earth/10 hover:border-clay">Περιβαλλον</button>
+                    <button onclick="changeCultureTab('events')" id="btn-events" class="px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition shadow-sm bg-white text-earth border border-earth/10 hover:border-clay">Εκδηλωσεις</button>
+                </div>
+
+                <div class="bg-white p-10 rounded-[40px] shadow-lg border border-earth/5 text-center transition-all duration-500 min-h-[300px] flex flex-col justify-center items-center">
+                    
+                    <div id="culture-icon" class="text-6xl mb-6 transition-transform duration-500 hover:scale-110">🏺</div>
+                    <h3 id="culture-title" class="text-2xl font-black text-earth uppercase mb-4">Τοπικη Παραδοση</h3>
+                    <p id="culture-desc" class="text-zinc-600 mb-6 max-w-lg mx-auto leading-relaxed">
+                        Διατήρηση και ανάδειξη της ιστορίας του χωριού μας. Συλλογή παλιών φωτογραφιών, καταγραφή ιστοριών από τους παλαιότερους και διατήρηση παραδοσιακών φορεσιών.
+                    </p>
+                    
+                    <div id="culture-tip" class="bg-cream px-6 py-3 rounded-xl border border-clay/20 text-sm font-bold text-clay inline-block">
+                        💡 Στόχος: Δημιουργία Ψηφιακού Λαογραφικού Μουσείου
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Τα δεδομένα για κάθε ενότητα
+            const cultureTabs = {
+                'tradition': {
+                    icon: '🏺',
+                    title: 'Τοπικη Παραδοση',
+                    desc: 'Διατήρηση και ανάδειξη της ιστορίας του χωριού μας. Συλλογή παλιών φωτογραφιών, καταγραφή ιστοριών από τους παλαιότερους και διατήρηση παραδοσιακών φορεσιών.',
+                    tip: '💡 Στόχος: Δημιουργία Ψηφιακού Λαογραφικού Μουσείου'
+                },
+                'environment': {
+                    icon: '🌳',
+                    title: 'Προστασια Περιβαλλοντος',
+                    desc: 'Δράσεις για τον καθαρισμό και την προστασία του Τιταρήσιου ποταμού και του κάμπου μας. Οργάνωση εθελοντικών δενδροφυτεύσεων και ανακύκλωσης.',
+                    tip: '💡 Στόχος: Καθαρισμός κεντρικών σημείων & δενδροφύτευση'
+                },
+                'events': {
+                    icon: '🎊',
+                    title: 'Γιορτες & Εκδηλωσεις',
+                    desc: 'Οργάνωση του ετήσιου πανηγυριού, γιορτές κρασιού και τσίπουρου, χοροεσπερίδες του συλλόγου και συναντήσεις των απανταχού Δελεριωτών.',
+                    tip: '💡 Στόχος: Ενίσχυση της συμμετοχής στις τοπικές γιορτές'
+                }
+            };
+
+            function changeCultureTab(selectedId) {
+                // 1. Ενημέρωση Κειμένων & Εικονιδίων στην κάρτα
+                document.getElementById('culture-icon').innerText = cultureTabs[selectedId].icon;
+                document.getElementById('culture-title').innerText = cultureTabs[selectedId].title;
+                document.getElementById('culture-desc').innerText = cultureTabs[selectedId].desc;
+                document.getElementById('culture-tip').innerText = cultureTabs[selectedId].tip;
+
+                // 2. Ενημέρωση Στυλ Κουμπιών (το πατημένο γίνεται χρωματιστό, τα άλλα άσπρα)
+                const buttons = ['tradition', 'environment', 'events'];
+                buttons.forEach(id => {
+                    const btn = document.getElementById('btn-' + id);
+                    if (id === selectedId) {
+                        // Ενεργό κουμπί (χρώμα clay)
+                        btn.className = 'px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition shadow-md bg-clay text-white';
+                    } else {
+                        // Ανενεργό κουμπί (άσπρο)
+                        btn.className = 'px-6 py-3 rounded-full font-bold text-sm uppercase tracking-widest transition shadow-sm bg-white text-earth border border-earth/10 hover:border-clay';
+                    }
+                });
+            }
+        </script>
+    </section>
+
     <section id="products" class="py-24 bg-zinc-50 scroll-mt-20">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
