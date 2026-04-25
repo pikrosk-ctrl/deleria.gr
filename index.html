@@ -451,28 +451,90 @@
         </div>
     </section>
 
-    <section id="weather" class="py-24 bg-white scroll-mt-20">
+    <section id="weather" class="py-24 bg-zinc-50 scroll-mt-20">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-16">
-                <span class="text-clay font-black tracking-widest text-[10px] uppercase">Προγνωση για το χωριο</span>
-                <h2 class="mt-4 text-4xl font-black text-earth uppercase tracking-tighter">Ο Καιρος στα Δελερια</h2>
+                <span class="text-clay font-black tracking-widest text-[10px] uppercase">Διαδραστικο Εργαλειο</span>
+                <h2 class="mt-4 text-4xl font-black text-earth uppercase tracking-tighter">Εξυπνος Καιρος Δελεριων</h2>
             </div>
 
             <div class="max-w-2xl mx-auto">
-                <div class="bg-cream p-10 rounded-[40px] shadow-sm border border-earth/5 text-center group hover:shadow-md transition duration-500">
-                    <div class="text-6xl mb-6 transition-transform group-hover:scale-110 duration-500">🌤️</div>
-                    <h3 class="text-xl font-bold text-earth uppercase mb-4 tracking-tight">Ενημερωθειτε για τις συνθηκες</h3>
-                    <p class="text-zinc-600 mb-8 leading-relaxed">
-                        Δείτε αναλυτικά την θερμοκρασία, την υγρασία και την ένταση του ανέμου στα Δελέρια, στοιχεία απαραίτητα για τις καθημερινές εργασίες και τον προγραμματισμό σας.
-                    </p>
-                    <a href="https://www.forecastweather.gr/o-kairos-simera.html?weather=9102_64349-pe-thessalias-n-larisas-deleria" 
-                       target="_blank" 
-                       class="inline-block bg-clay text-white font-bold py-4 px-10 rounded-full hover:bg-earth transition duration-300 shadow-lg uppercase tracking-widest text-sm">
-                        Αναλυτικη Προγνωση στο ForecastWeather
-                    </a>
+                <div id="weatherCard" class="bg-white p-8 rounded-[40px] shadow-lg border border-earth/5 text-center transition-all duration-500">
+                    
+                    <div class="py-8">
+                        <div id="weatherIcon" class="text-7xl mb-4 transition-transform duration-500 hover:scale-110">☀️</div>
+                        <div id="tempDisplay" class="text-5xl font-black text-earth mb-4">24°C</div>
+                        <div id="weatherAdvice" class="text-clay font-bold text-lg px-4 h-12">
+                            Ιδανικές συνθήκες. Μην ξεχνάτε το πότισμα!
+                        </div>
+                    </div>
+
+                    <hr class="border-earth/10 my-6">
+
+                    <div class="text-left bg-cream p-6 rounded-3xl">
+                        <h4 class="font-bold text-earth text-sm uppercase mb-4 tracking-widest">Επιλεξτε Συνθηκες:</h4>
+                        
+                        <div class="flex flex-wrap gap-4 mb-6" onchange="updateWeather()">
+                            <label class="cursor-pointer bg-white px-4 py-2 rounded-full border border-earth/10 text-sm font-bold shadow-sm hover:bg-clay hover:text-white transition">
+                                <input type="radio" name="weatherType" value="sunny" class="hidden" checked> ☀️ Ηλιοφάνεια
+                            </label>
+                            <label class="cursor-pointer bg-white px-4 py-2 rounded-full border border-earth/10 text-sm font-bold shadow-sm hover:bg-clay hover:text-white transition">
+                                <input type="radio" name="weatherType" value="rainy" class="hidden"> 🌧️ Βροχή
+                            </label>
+                            <label class="cursor-pointer bg-white px-4 py-2 rounded-full border border-earth/10 text-sm font-bold shadow-sm hover:bg-clay hover:text-white transition">
+                                <input type="radio" name="weatherType" value="windy" class="hidden"> 💨 Άνεμος
+                            </label>
+                            <label class="cursor-pointer bg-white px-4 py-2 rounded-full border border-earth/10 text-sm font-bold shadow-sm hover:bg-clay hover:text-white transition">
+                                <input type="radio" name="weatherType" value="frost" class="hidden"> ❄️ Παγετός
+                            </label>
+                        </div>
+
+                        <div class="mb-2">
+                            <label class="font-bold text-earth text-sm uppercase mb-2 block tracking-widest">Θερμοκρασια:</label>
+                            <input type="range" id="tempSlider" min="-5" max="40" value="24" class="w-full accent-clay" oninput="updateWeather()">
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <a href="https://www.forecastweather.gr/o-kairos-simera.html?weather=9102_64349-pe-thessalias-n-larisas-deleria" target="_blank" class="text-sm font-bold text-zinc-500 hover:text-clay underline">
+                            Δείτε την πραγματική πρόγνωση στο ForecastWeather
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
+
+        <script>
+            function updateWeather() {
+                const type = document.querySelector('input[name="weatherType"]:checked').value;
+                const temp = document.getElementById('tempSlider').value;
+                document.getElementById('tempDisplay').innerText = temp + '°C';
+
+                let advice = '';
+                let icon = '';
+
+                // Λογική για τις συμβουλές
+                if (type === 'sunny') {
+                    icon = '☀️';
+                    if (temp > 30) advice = 'Πολύ ζέστη. Προσοχή στο πότισμα των δέντρων!';
+                    else advice = 'Όμορφη μέρα με ηλιοφάνεια στα Δελέρια.';
+                } else if (type === 'rainy') {
+                    icon = '🌧️';
+                    advice = 'Ευνοϊκή βροχόπτωση για τα χωράφια και τα σιτηρά μας.';
+                } else if (type === 'windy') {
+                    icon = '💨';
+                    advice = 'ΠΡΟΣΟΧΗ: Αποφύγετε τους ψεκασμούς λόγω δυνατού ανέμου.';
+                } else if (type === 'frost') {
+                    icon = '❄️';
+                    if (temp <= 2) advice = 'ΚΙΝΔΥΝΟΣ ΠΑΓΕΤΟΥ! Προστατέψτε τις ευαίσθητες καλλιέργειες.';
+                    else advice = 'Κρύος καιρός, ντυθείτε ζεστά.';
+                }
+
+                document.getElementById('weatherIcon').innerText = icon;
+                document.getElementById('weatherAdvice').innerText = advice;
+            }
+        </script>
     </section>
 
     <section id="contact" class="py-24 bg-cream scroll-mt-20">
