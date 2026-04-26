@@ -45,24 +45,45 @@
 </head>
 <body class="bg-cream text-zinc-900 font-sans">
 
-    <nav class="fixed top-0 w-full z-50 bg-earth/95 backdrop-blur-md border-b border-white/10">
+    <header class="fixed top-0 w-full z-50 bg-earth/95 backdrop-blur-md border-b border-white/10 text-white">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
-            <a href="index.html" class="text-white font-bold tracking-tight text-2xl uppercase">ΔΕΛΕΡΙΑ</a>
-            <div class="hidden md:flex space-x-6 text-[9px] lg:text-[10px] font-black uppercase tracking-widest text-white/70">
-                <a href="#village" class="hover:text-white transition">Το Χωριο</a>
-                <a href="#history" class="hover:text-white transition">Ιστορια</a>
-                <a href="#sights" class="hover:text-white transition">Αξιοθεατα</a>
-                <a href="#culture" class="hover:text-clay transition">Πολιτισμος</a>
-                <a href="#products" class="hover:text-white transition">Προϊοντα</a>
-                <a href="#photos" class="hover:text-white transition">Φωτογραφιες</a>
-                <a href="#videos" class="hover:text-white transition">Βιντεο</a>
-                <a href="#links" class="hover:text-white transition">Συνδεσμοι</a>
-                <a href="#location" class="hover:text-white transition">Τοποθεσια</a>
-                <a href="#weather" class="hover:text-white transition">Καιρος</a>
-                <a href="#contact" class="hover:text-white transition">Επικοινωνια</a>
-            </div>
+            <a href="index.html" class="font-bold tracking-tight text-2xl uppercase shrink-0">ΔΕΛΕΡΙΑ</a>
+
+            <nav class="hidden xl:flex gap-3 text-[8.5px] font-black uppercase tracking-tighter items-center">
+                <a href="#village" class="hover:text-clay transition whitespace-nowrap">Το Χωριο</a>
+                <a href="#history" class="hover:text-clay transition whitespace-nowrap">Ιστορια</a>
+                <a href="#sights" class="hover:text-clay transition whitespace-nowrap">Αξιοθεατα</a>
+                <a href="#culture" class="hover:text-clay transition whitespace-nowrap">Πολιτισμος</a>
+                <a href="#products" class="hover:text-clay transition whitespace-nowrap">Προϊοντα</a>
+                <a href="#photos" class="hover:text-clay transition whitespace-nowrap">Φωτογραφιες</a>
+                <a href="#videos" class="hover:text-clay transition whitespace-nowrap">Βιντεο</a>
+                <a href="#links" class="hover:text-clay transition whitespace-nowrap">Συνδεσμοι</a>
+                <a href="#location" class="hover:text-clay transition whitespace-nowrap">Τοποθεσια</a>
+                <a href="#weather" class="hover:text-clay transition whitespace-nowrap">Καιρος</a>
+                <a href="#contact" class="hover:text-clay transition border border-white/20 px-2 py-1 rounded whitespace-nowrap">Επικοινωνια</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="xl:hidden flex flex-col gap-1.5 p-2 focus:outline-none">
+                <span class="w-6 h-0.5 bg-white block"></span>
+                <span class="w-6 h-0.5 bg-white block"></span>
+                <span class="w-6 h-0.5 bg-white block"></span>
+            </button>
         </div>
-    </nav>
+
+        <div id="mobile-menu" class="hidden bg-earth border-t border-white/10 xl:hidden flex-col text-center text-sm shadow-2xl overflow-y-auto max-h-[80vh]">
+            <a href="#village" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest">Το Χωριο</a>
+            <a href="#history" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest">Ιστορια</a>
+            <a href="#sights" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest">Αξιοθεατα</a>
+            <a href="#culture" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest">Πολιτισμος</a>
+            <a href="#products" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest">Προϊοντα</a>
+            <a href="#photos" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest">Φωτογραφιες</a>
+            <a href="#videos" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest">Βιντεο</a>
+            <a href="#links" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest text-clay">Συνδεσμοι</a>
+            <a href="#location" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest">Τοποθεσια</a>
+            <a href="#weather" class="py-4 border-b border-white/5 font-bold uppercase tracking-widest">Καιρος</a>
+            <a href="#contact" class="py-4 font-bold uppercase tracking-widest bg-clay/20">Επικοινωνια</a>
+        </div>
+    </header>
 
     <section class="relative min-h-screen flex items-center justify-center text-center hero-village">
         <div class="relative z-10 px-6">
@@ -751,6 +772,27 @@
         }, { threshold: 0.1 });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
     </script>
+        
+    <script>
+        // Λειτουργία Mobile Menu
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        // Κλείσιμο μενού όταν πατάμε κάποια επιλογή
+        const menuLinks = mobileMenu.querySelectorAll('a');
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+    </script>
+        
 </body>
 </html>
 
